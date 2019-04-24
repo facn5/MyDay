@@ -1,4 +1,4 @@
-export const API_BASE = "http://history.muffinlabs.com/date/"
+export const API_BASE = "http://history.muffinlabs.com/date/01/01"
 
 const checkResponse = response => {
   if (response.status != 200) {
@@ -9,7 +9,7 @@ const checkResponse = response => {
 }
 
 export const getData = url => {
-  return fetch(`$url`)
+  return fetch(`${url}`)
   .then(checkResponse)
   .catch(err => {
     throw new Error (`fetch getUserData failed ${err}`);
