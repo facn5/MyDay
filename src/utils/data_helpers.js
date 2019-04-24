@@ -11,6 +11,9 @@ const checkResponse = response => {
 export const getData = url => {
   return fetch(`${url}`)
   .then(checkResponse)
+  .then(data => {
+    console.log(data);
+  })
   .catch(err => {
     throw new Error (`fetch getUserData failed ${err}`);
   })
