@@ -20,12 +20,14 @@ class Card extends React.Component {
         } = this.state.data;
 
         if( data ){
-            var x = this.state.data.data['Events'][2].text;
+            console.log("satra",data['Births']);
+            var y = data['Births'].length;
+            // var x = this.state.data.data['Briths'].text;
+            console.log(data['Births'][y-1].text);
         }
 
         return (
             <div>
-                <p>{x}</p>
             </div>
         );
     }
